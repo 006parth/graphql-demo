@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Posts</h2>
+    <ul class="list-group">
+        <li *ngFor="let post of posts | async" class="list-group-item">
+            <p>Title : {{post.title}}</p>
+            <p>Author : {{post.author.firstName}} {{post.author.lastName}}</p>
+            <p>{{post.votes}} Upvoted</p>
+            <button  type="button" class="btn btn-success" (click)="upvote(post.id)">Upvote</button>
+        </li>
+
+    </ul>
+</div>
